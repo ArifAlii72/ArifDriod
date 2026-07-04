@@ -1,46 +1,484 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp">
+    android:background="#F5F5F5">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ArifDroid"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:textColor="#FF6200EE"/>
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Developed by Arif Ali"
-        android:layout_marginTop="8dp"
-        android:textSize="16sp"
-        android:textColor="#666666"/>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_donate"
-        android:layout_width="200dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="40dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="6dp"
-        android:backgroundTint="#FF6200EE">
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🛠️ ArifDroid"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FF6200EE"
+            android:gravity="center"
+            android:layout_marginBottom="4dp"/>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="☕ Buy Me a Coffee"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:layout_height="wrap_content"
+            android:text="Developed by Arif Ali"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:layout_marginBottom="20dp"/>
 
-    </androidx.cardview.widget.CardView>
+        <!-- Grid Layout for Features -->
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:columnCount="2"
+            app:rowCount="10">
 
-</LinearLayout>
+            <!-- Feature 1: QR Scanner -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_qr"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="📷" android:textSize="28dp"/>
+                    <TextView android:text="QR Scanner" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 2: Flashlight -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_flashlight"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🔦" android:textSize="28dp"/>
+                    <TextView android:text="Flashlight" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 3: Cache Cleaner -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_cleaner"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🧹" android:textSize="28dp"/>
+                    <TextView android:text="Cache Cleaner" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 4: App Blocker -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_blocker"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🔒" android:textSize="28dp"/>
+                    <TextView android:text="App Blocker" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 5: Battery Info -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_battery"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🔋" android:textSize="28dp"/>
+                    <TextView android:text="Battery Info" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 6: URL Cleaner -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_url"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🔗" android:textSize="28dp"/>
+                    <TextView android:text="URL Cleaner" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 7: Screen Recorder -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_recorder"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🎥" android:textSize="28dp"/>
+                    <TextView android:text="Screen Recorder" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 8: Notes -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_notes"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="📝" android:textSize="28dp"/>
+                    <TextView android:text="Notes" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 9: Calculator -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_calculator"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🧮" android:textSize="28dp"/>
+                    <TextView android:text="Calculator" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 10: Unit Converter -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_converter"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="📏" android:textSize="28dp"/>
+                    <TextView android:text="Unit Converter" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 11: Weather -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_weather"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🌤️" android:textSize="28dp"/>
+                    <TextView android:text="Weather" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 12: Compass -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_compass"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🧭" android:textSize="28dp"/>
+                    <TextView android:text="Compass" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 13: Speed Test -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_speed"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🚀" android:textSize="28dp"/>
+                    <TextView android:text="Speed Test" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 14: Password Generator -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_password"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🔑" android:textSize="28dp"/>
+                    <TextView android:text="Password Gen" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 15: Stopwatch -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_stopwatch"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="⏱️" android:textSize="28dp"/>
+                    <TextView android:text="Stopwatch" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 16: QR Generator -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_qr_gen"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="📲" android:textSize="28dp"/>
+                    <TextView android:text="QR Generator" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 17: Text to Speech -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_tts"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🗣️" android:textSize="28dp"/>
+                    <TextView android:text="Text to Speech" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 18: Color Picker -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_color"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🎨" android:textSize="28dp"/>
+                    <TextView android:text="Color Picker" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 19: Level Tool -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_level"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="📐" android:textSize="28dp"/>
+                    <TextView android:text="Level Tool" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Feature 20: SOS Alert -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_sos"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="🆘" android:textSize="28dp"/>
+                    <TextView android:text="SOS Alert" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Donation Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_donate"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="6dp"
+                app:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#FF6200EE">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView android:text="☕" android:textSize="28dp"/>
+                    <TextView android:text="Buy Me a Coffee" android:textSize="12sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.gridlayout.widget.GridLayout>
+
+    </LinearLayout>
+</ScrollView>
