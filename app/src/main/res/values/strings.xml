@@ -1,1 +1,4 @@
-
+<resources>
+    <string name="app_name">ArifDroid</string>
+    <string name="donation_url">https://buymeacoffee.com/arifali</string>
+</resources>
