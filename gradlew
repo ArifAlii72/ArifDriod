@@ -1,3 +1,2 @@
-#!/usr/bin/env bash
-# Gradle wrapper mock script
-./gradle/wrapper/gradle-wrapper.jar
+#!/bin/sh
+exec java -jar gradle/wrapper/gradle-wrapper.jar "$@"
